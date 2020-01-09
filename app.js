@@ -1,12 +1,13 @@
 var express = require('express');
 var app = express();
+var gas = require('./gasCalc.js');
 
 app.get('/update.html', function (req, res, next) {
       console.log(req.query);
       if (req.query.name != undefined) {
           app.locals.name = req.query.name;
           app.locals.link = req.query.link;
-          res.send('<a href="/">Successfully added, go back to home</a>');
+          res.send(gas.findGasCost(app.locals.name,app.locals.link));
       } else {
           next();
       }
