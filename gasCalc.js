@@ -16,10 +16,11 @@ gasMoney = gasPrices * gasMoney;
 console.log('gas Price: ' + gasPrices);
 module.exports = {
 	findGasCost: function (milesToGo, mpg) {
-		
+		console.log('findGasCost: ' + milesToGo + ' ' + mpg);
+		console.log('gas Price: ' + gasPrices);
 		var gasMoney = milesToGo/mpg;
 		gasMoney = gasPrices * gasMoney;
-		console.log('gas Price: ' + gasPrices);
+		console.log('Gas Money: ' + gasMoney);
 		return gasMoney.toString();
 		
 	}
