@@ -4,9 +4,8 @@ const fs = require('fs');
 var gasCost = 0;
 const parser = new xml2js.Parser({ attrkey: "ATTR" });
 //converts xml to JSONfind
-module.exports = {
-function getMe()
-{
+
+
 let req = http.get("https://www.fueleconomy.gov/ws/rest/fuelprices", function(res) {
     let data = '';
     res.on('data', function(stream) {
@@ -28,5 +27,5 @@ let req = http.get("https://www.fueleconomy.gov/ws/rest/fuelprices", function(re
         });
     });
 });
-return gasCost;
-}
+
+

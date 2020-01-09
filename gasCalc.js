@@ -1,6 +1,6 @@
 var gasPriceCalc = require('./getGasPrice.js');
 const fs = require("fs");
-var gasPrices = gasPriceCalc.getMe();
+var gasPrices = gasPriceCalc;
 let fileName = "gasPrice.json";
 let data = JSON.parse(fs.readFileSync(fileName));
 

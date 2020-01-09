@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var gas = require('./gasCalc.js');
+var gasPriceCalc = require('./getGasPrice.js');
 
 app.get('/update.html', function (req, res, next) {
       console.log(req.query);
